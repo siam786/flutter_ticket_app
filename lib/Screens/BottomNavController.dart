@@ -1,21 +1,23 @@
+
 import 'package:flutter/material.dart';
 
+import 'HomeScreen.dart';
 import 'bottom_bar_screen.dart';
 
-class Home extends StatefulWidget {
+class BottomNavController extends StatefulWidget {
   static final List<Widget> _widgetOptions = <Widget>[
-    const Text("Home"),
-    const Text("Search"),
+    const HomeScreen(),
+    const Text("Search here"),
     const Text("Ticket"),
     const Text("Profile man"),
   ];
-  const Home({Key? key}) : super(key: key);
+  const BottomNavController({Key? key}) : super(key: key);
 
   @override
-  State<Home> createState() => _HomeState();
+  State<BottomNavController> createState() => _BottomNavControllerState();
 }
 
-class _HomeState extends State<Home> {
+class _BottomNavControllerState extends State<BottomNavController> {
   int _selectedIndex = 0;
   void _onItemTap(int index) {
     setState(() {
@@ -27,7 +29,7 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Home._widgetOptions[_selectedIndex],
+        child: BottomNavController._widgetOptions[_selectedIndex],
       ),
       bottomNavigationBar: BottomBar(
         onTap: _onItemTap,

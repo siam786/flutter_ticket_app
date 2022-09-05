@@ -2,9 +2,10 @@ import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 
 class BottomBar extends StatefulWidget {
-  const BottomBar({Key? key, required this.onTap, required this.currentIndex}) : super(key: key);
+  const BottomBar({Key? key, required this.onTap, required this.currentIndex})
+      : super(key: key);
   final void Function(int) onTap;
-  final int currentIndex; 
+  final int currentIndex;
 
   @override
   State<BottomBar> createState() => _BottomBarState();
@@ -26,22 +27,22 @@ class _BottomBarState extends State<BottomBar> {
         BottomNavigationBarItem(
           icon: Icon(FluentSystemIcons.ic_fluent_home_add_regular),
           activeIcon: Icon(FluentSystemIcons.ic_fluent_home_add_filled),
-          label: "Home",
+          label: "",
         ),
         BottomNavigationBarItem(
           icon: Icon(FluentSystemIcons.ic_fluent_search_filled),
           activeIcon: Icon(FluentSystemIcons.ic_fluent_search_regular),
-          label: "Search",
+          label: "",
         ),
         BottomNavigationBarItem(
           icon: Icon(FluentSystemIcons.ic_fluent_ticket_regular),
           activeIcon: Icon(FluentSystemIcons.ic_fluent_ticket_filled),
-          label: "Ticket",
+          label: "",
         ),
         BottomNavigationBarItem(
           icon: Icon(FluentSystemIcons.ic_fluent_person_regular),
           activeIcon: Icon(FluentSystemIcons.ic_fluent_person_filled),
-          label: "Person",
+          label: "",
         )
       ],
     );
