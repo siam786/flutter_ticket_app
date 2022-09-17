@@ -1,5 +1,4 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:ticket_app/Screens/hotel_screen.dart';
@@ -61,25 +60,41 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(
                 height: 25.0,
               ),
-              Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.white),
-                child: Row(children: [
-                  const Icon(
-                    FluentSystemIcons.ic_fluent_search_regular,
+              // Container(
+              //   padding:
+              //       const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+              //   decoration: BoxDecoration(
+              //       borderRadius: BorderRadius.circular(10),
+              //       color: Colors.white),
+              //   child: Row(children: [
+              //     const Icon(
+              //       FluentSystemIcons.ic_fluent_search_regular,
+              //       color: Colors.blue,
+              //     ),
+              //     const SizedBox(
+              //       width: 5.0,
+              //     ),
+              //     Text(
+              //       'Search Here and...',
+              //       style: Styles.headLineStyle4,
+              //     ),
+              //   ]),
+              // ),
+              TextField(
+                scrollPadding: const EdgeInsets.all(10),
+                decoration: InputDecoration(
+                  fillColor: Colors.white,
+                  filled: true,
+                  hintText: 'Search',
+                  hintStyle: Styles.headLineStyle4,
+                  prefixIcon: const Icon(
+                    Icons.search,
                     color: Colors.blue,
                   ),
-                  const SizedBox(
-                    width: 5.0,
-                  ),
-                  Text(
-                    'Search Here...',
-                    style: Styles.headLineStyle4,
-                  )
-                ]),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide.none),
+                ),
               ),
               const SizedBox(
                 height: 40,
