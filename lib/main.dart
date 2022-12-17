@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'Screens/BottomNavController.dart';
 
 void main(List<String> args) {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

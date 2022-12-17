@@ -1,8 +1,9 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
+
 import 'package:ticket_app/Screens/hotel_screen.dart';
 import 'package:ticket_app/Screens/ticket_view.dart';
+import 'package:ticket_app/Utility/app-info.dart';
 import 'package:ticket_app/Utility/app_style.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -85,7 +86,7 @@ class HomeScreen extends StatelessWidget {
                 decoration: InputDecoration(
                   fillColor: Colors.white,
                   filled: true,
-                  hintText: 'Search',
+                  hintText: 'Search Here...',
                   hintStyle: Styles.headLineStyle4,
                   prefixIcon: const Icon(
                     Icons.search,
@@ -157,11 +158,11 @@ class HomeScreen extends StatelessWidget {
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 padding: const EdgeInsets.only(left: 20),
-                child: Row(children: const [
-                  HotelScreen(),
-                  HotelScreen(),
-                  HotelScreen()
-                ]),
+                child: Row(
+                  children: hotelList
+                      .map((singleHotel) => HotelScreen(hotel: singleHotel))
+                      .toList(),
+                ),
               )
             ]),
           )

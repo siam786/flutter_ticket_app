@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:ticket_app/Utility/app_layout.dart';
 import 'package:ticket_app/Utility/app_style.dart';
 
 class HotelScreen extends StatelessWidget {
-  const HotelScreen({Key? key}) : super(key: key);
+  // final Map<String, dynamic> hotel;
+  const HotelScreen({
+    Key? key, required Map<String, dynamic> hotel,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,8 +35,8 @@ class HotelScreen extends StatelessWidget {
             height: 180,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(12),
-              image: const DecorationImage(
-                  image: AssetImage('assets/images/rocket.png'),
+              image: DecorationImage(
+                  image: AssetImage("assets/images/hotel-mountain.jpg"),
                   fit: BoxFit.cover),
             ),
           ),
@@ -43,15 +44,15 @@ class HotelScreen extends StatelessWidget {
             height: 5,
           ),
           Text(
-            'Hotel Name',
+            'Dhaka',
             style: Styles.headLineStyle3.copyWith(color: Colors.white),
           ),
           Text(
-            'Chittagong',
+            'Rangpur',
             style: Styles.headLineStyle4.copyWith(color: Colors.white),
           ),
           Text(
-            '500 BDT/night',
+            '100tk perday',
             style: Styles.headLineStyle1.copyWith(color: Colors.white),
           ),
         ],

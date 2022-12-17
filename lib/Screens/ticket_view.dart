@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:ticket_app/Utility/app_layout.dart';
 import 'package:ticket_app/Utility/app_style.dart';
 
@@ -24,16 +22,14 @@ class TicketView extends StatelessWidget {
                   topLeft: Radius.circular(20),
                   topRight: Radius.circular(21),
                 ),
-                color: Color.fromRGBO(55, 71, 79, 1)),
+                color: Colors.blue),
             child: Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(children: [
                 Row(
                   children: [
-                    Text(
+                    const Text(
                       'DHK',
-                      style:
-                          Styles.headLineStyle3.copyWith(color: Colors.white),
                     ),
                     Expanded(child: Container()),
                     const CircularBorder(),

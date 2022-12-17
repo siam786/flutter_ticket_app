@@ -1,4 +1,5 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 
 import 'HomeScreen.dart';
@@ -28,33 +29,33 @@ class _BottomNavControllerState extends State<BottomNavController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Center(
-          child: BottomNavController._widgetOptions[_selectedIndex],
-        ),
-        bottomNavigationBar: BottomBar(
-          onTap: _onItemTap,
-          currentIndex: _selectedIndex,
-        ),
-        // bottomNavigationBar: CurvedNavigationBar(
-        //   items: const [
-        //     Icon(
-        //       Icons.add,
-        //       size: 30,
-        //     ),
-        //     Icon(
-        //       Icons.list,
-        //       size: 30,
-        //     ),
-        //     Icon(
-        //       Icons.search,
-        //       size: 30,
-        //     ),
-        //     Icon(
-        //       Icons.settings,
-        //       size: 30,
-        //     ),
-        //   ],
-        // ),
-        );
+      body: Center(
+        child: BottomNavController._widgetOptions[_selectedIndex],
+      ),
+      bottomNavigationBar: BottomBar(
+        onTap: _onItemTap,
+        currentIndex: _selectedIndex,
+      ),
+      // bottomNavigationBar: CurvedNavigationBar(
+      //   items: const [
+      //     Icon(
+      //       Icons.add,
+      //       size: 30,
+      //     ),
+      //     Icon(
+      //       Icons.list,
+      //       size: 30,
+      //     ),
+      //     Icon(
+      //       Icons.search,
+      //       size: 30,
+      //     ),
+      //     Icon(
+      //       Icons.settings,
+      //       size: 30,
+      //     ),
+      //   ],
+      // ),
+    );
   }
 }
